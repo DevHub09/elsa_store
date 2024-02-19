@@ -1,4 +1,5 @@
 import bcrypt from "bcrypt";//bcrypt hides the password
+
 export const hashPassword = async (password)=>{
 try {
     const saltRounds = 10 ;
