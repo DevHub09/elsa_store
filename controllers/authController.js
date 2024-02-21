@@ -1,10 +1,8 @@
 import userModel from "../models/userModel.js";
 import { hashPassword } from "../helpers/authHelper.js";
-
 export const registerController = async (req, res) => {
   try {
     const { name, email, password, phone, address } = req.body;
-
     //validation
     if (!name) {
       return res.send({ error: "name is required" });
@@ -33,18 +31,13 @@ export const registerController = async (req, res) => {
     //register user
     const hashedPassword = await hashPassword(password);
     //save it
-    const user = await new userModel({
+    const user = new userModel({
       name,
       email,
       phone,
       address,
       password: hashedPassword,
-    }).save();
-    console.log({
-      success: true,
-      message: "user successfully  register",
-      user,
-    });
+    }).save;
     res.status(201).send({
       success: true,
       message: "user successfully  register",
