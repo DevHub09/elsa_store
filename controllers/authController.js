@@ -38,8 +38,12 @@ export const registerController = async (req, res) => {
       phone,
       address,
       password: hashedPassword,
-    }).save;
-
+    }).save();
+    console.log({
+      success: true,
+      message: "user successfully  register",
+      user,
+    });
     res.status(201).send({
       success: true,
       message: "user successfully  register",
