@@ -31,13 +31,18 @@ export const registerController = async (req, res) => {
     //register user
     const hashedPassword = await hashPassword(password);
     //save it
-    const user = new userModel({
+    const user = await new userModel({
       name,
       email,
       phone,
       address,
       password: hashedPassword,
-    }).save;
+    }).save();
+    console.log({
+      success: true,
+      message: "user successfully  register",
+      user,
+    });
     res.status(201).send({
       success: true,
       message: "user successfully  register",
