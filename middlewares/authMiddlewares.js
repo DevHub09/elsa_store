@@ -1,13 +1,14 @@
-import  Jwt  from "jsonwebtoken";
-//protected routes token base 
-export const requireSignIn = async(req,res,next)=>{
-try {
-    //VERIFY FOR COMPARE TOCKEN
-    //tokens headers may hota ha 
-    const decode = JWT.verify(req.headers.authorization,process.env.JWT_SECRET)
+import Jwt from "jsonwebtoken";
+//protected routes token base
+export const requireSignIn = async (req, res, next) => {
+  try {
+    const decode = Jwt.verify(
+      req.headers.authorization,
+      process.env.JWT_SECRET
+    );
+    req.user = decode;
     next();
-} catch (error) {
-    console.log(error)
-
-}
-} 
+  } catch (error) {
+    console.log(error);
+  }
+};
