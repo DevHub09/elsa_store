@@ -71,3 +71,15 @@ justify-content: center;
   background:rgb(155, 154, 154);
   font-weight: bold;
 }
+/* contact us  */
+.contactus {
+  margin-top: 20px; /* Add margin to the top */
+}
+
+.contact-info {
+  margin-right: 20px; /* Add margin to the right */
+}
+
+.contact-image {
+  width: 100%; /* Ensure the image takes up the full width of its container */
+}
