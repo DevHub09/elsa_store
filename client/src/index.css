@@ -83,3 +83,14 @@ justify-content: center;
 .contact-image {
   width: 100%; /* Ensure the image takes up the full width of its container */
 }
+/* register page */
+.register{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+flex-direction: column;
+}
+
+
+
