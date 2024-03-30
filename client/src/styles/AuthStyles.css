@@ -1,29 +1,64 @@
+
 .register {
-    color: black; /* Set text color to black */
+    width: 40%;
+    height: 50%;
+    padding: 30px;
+    border: 3px solid black;
+    border-radius: 0px;
+    background-color: black;
+    color: white;
+    margin: 0 auto; /* Center the form horizontally */
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   
+  /* Rest of your CSS rules */
+  
+  .register form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .register input{
+    background: none;
+    border-radius: 0%;
+    border: none;
+border-bottom: 1px white solid;
+  }
   .register h1 {
-    color: grey; /* Set heading color to grey */
+    color: white; /* Set heading color to grey */
   }
   
-  /* Set input border color to black */
-  .register input {
-    border-color: black;
-  }
   
   /* Set button background color to grey */
   .register button {
-    background-color: grey;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 0%;
     color: white; /* Set button text color to white */
-  }
+   width: 50%;  
+   margin-top: 10px;
+   font-weight: bolder;
+}
   
   /* Change button background color on hover */
   .register button:hover {
-    background-color: black;
+    background-color:grey;
+    color: black;
+    border: black 1px;
+    align-items: center;
+    
   }
   
   /* Change input border color on focus */
   .register input:focus {
-    border-color: grey;
+    border-color:grey;
+    
+  }
+  /* Set placeholder color to white */
+.register input::placeholder {
+    color: rgba(255, 255, 255, 0.671);
   }
   
