@@ -1,8 +1,8 @@
 import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import { ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import { Toaster} from 'react-hot-toast';
+
 // import {Helmet} from "react-helmet"...// layyout har page may use howa ha to isi liye  hum meta tags ismay use k
 const Layout = ({children}) => {
   return (
@@ -14,7 +14,7 @@ const Layout = ({children}) => {
 
       <Header/>
       <main style={{minHeight:"70vh"}}>
-        <ToastContainer/>
+        <Toaster/>
       {children}
       </main>
      <Footer/>

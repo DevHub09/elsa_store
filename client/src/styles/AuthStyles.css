@@ -1,0 +1,29 @@
+.register {
+    color: black; /* Set text color to black */
+  }
+  
+  .register h1 {
+    color: grey; /* Set heading color to grey */
+  }
+  
+  /* Set input border color to black */
+  .register input {
+    border-color: black;
+  }
+  
+  /* Set button background color to grey */
+  .register button {
+    background-color: grey;
+    color: white; /* Set button text color to white */
+  }
+  
+  /* Change button background color on hover */
+  .register button:hover {
+    background-color: black;
+  }
+  
+  /* Change input border color on focus */
+  .register input:focus {
+    border-color: grey;
+  }
+  
