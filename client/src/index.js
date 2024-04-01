@@ -1,19 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom';
-import { AuthProvider } from './context/auth';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./context/auth";
 
-//routing ki functionality ko enable ker den gay 
-const root = ReactDOM.createRoot(document.getElementById('root'));//root pulc may se index file se get kiya ha
+//routing ki functionality ko enable ker den gay
+const root = ReactDOM.createRoot(document.getElementById("root")); //root pulc may se index file se get kiya ha
 root.render(
-<AuthProvider>
-<BrowserRouter>
-     <App />
-</BrowserRouter>
-</AuthProvider>
+  <BrowserRouter>
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext, createContext } from "react";
 
 const AuthContext = createContext();
-const AuthProvider = ({ Children }) => {
+const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState({
     user: null,
     token: "",
@@ -16,8 +16,12 @@ const AuthProvider = ({ Children }) => {
         token: parseData.token,
       });
     }
-  }, [auth]);
-  return <AuthProvider value={[auth, setAuth]}>{Children}</AuthProvider>;
+  }, []);
+  return (
+    <AuthContext.Provider value={[auth, setAuth]}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 //custom hook
 const useAuth = () => useContext(AuthContext);
