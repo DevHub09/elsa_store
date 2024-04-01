@@ -4,15 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
+import { AuthProvider } from './context/auth';
 
 //routing ki functionality ko enable ker den gay 
 const root = ReactDOM.createRoot(document.getElementById('root'));//root pulc may se index file se get kiya ha
 root.render(
-
+<AuthProvider>
 <BrowserRouter>
      <App />
 </BrowserRouter>
-
+</AuthProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
