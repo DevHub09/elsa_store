@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { FaBagShopping } from "react-icons/fa6";
 import { useAuth } from "../../context/auth";
+import toast, { Toast} from "react-hot-toast";
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const handleLogout = () => {
@@ -10,9 +11,11 @@ const Header = () => {
       user: null,
       token: "",
     });
-    localStorage.removeItem("token");
+    localStorage.removeItem("auth");
+    toast.success("logout successfully!")
   };
   return (
+    
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">

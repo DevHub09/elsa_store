@@ -3,8 +3,10 @@ import userModel from "../models/userModel.js";
 //protected routes token base
 export const requireSignIn = async (req, res, next) => {
   try {
-    const decode = Jwt.verify(//in dono ko compare karay ga phir decode ker dega ,value match ho ya na ho
-      req.headers.authorization,//header se token get hain hum
+    const decode = Jwt.verify(
+      //in dono ko compare karay ga phir decode ker dega 
+      //,value match ho ya na ho
+      req.headers.authorization, //header se token get hain hum
       process.env.JWT_SECRET
     );
     req.user = decode;
