@@ -60,6 +60,24 @@ const Login = () => {
                 required
               />
             </div>
+            {/* <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={() => {
+                navigate("/forgot-password");
+              }}
+            >
+              forgot password
+            </button> */}
+            <button
+              type="submit"
+              className="forgetp"
+              onClick={() => {
+                navigate("/forgot-password");
+              }}
+            >
+              Forgot-Password?
+            </button>
 
             <button type="submit" className="btn btn-primary">
               LOGIN

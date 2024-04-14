@@ -61,4 +61,16 @@ border-bottom: 1px white solid;
 .register input::placeholder {
     color: rgba(255, 255, 255, 0.671);
   }
+
+.forgetp {
+    background-color: transparent; /* Make button background colorless */
+    color: yellow; /* Set text color to black */
+    width: 100%; /* Make button cover entire width vertically */
+   border: none;
+  }
+  
+
+
+
+
   
