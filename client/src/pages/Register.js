@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Layout from "../../components/layout/Layout";
+import Layout from "../components/layout/Layout";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom"; //ek pg se dosaray pg per navigate kernay k liye
-import "../../styles/AuthStyles.css";
+import "../styles/AuthStyles.css";
 import axios from "axios"; //Axios is a JavaScript library used for making HTTP requests from web applications.
 const Register = () => {
   const [name, setName] = useState(""); //first parameter getter 2nd is setter

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Layout from "../../components/layout/Layout";
+import Layout from "../components/layout/Layout";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom"; //ek pg se dosaray pg per navigate kernay k liye
-import "../../styles/AuthStyles.css";
+import "../styles/AuthStyles.css";
 import axios from "axios"; //database se data lene k liye
-import { useAuth } from "../../context/auth";
+import { useAuth } from "../context/auth";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -69,15 +69,7 @@ const Login = () => {
             >
               forgot password
             </button> */}
-            <button
-              type="submit"
-              className="forgetp"
-              onClick={() => {
-                navigate("/forgot-password");
-              }}
-            >
-              Forgot-Password?
-            </button>
+       
 
             <button type="submit" className="btn btn-primary">
               LOGIN

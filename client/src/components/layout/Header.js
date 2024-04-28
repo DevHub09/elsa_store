@@ -24,7 +24,7 @@ const Header = () => {
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"x
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
@@ -32,20 +32,11 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              <FaBagShopping /> Ecommerce app
+              <FaBagShopping /> Data Encryption 
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <NavLink to="/" className="nav-link">
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/category" className="nav-link ">
-                  Category
-                </NavLink>
-              </li>
-
+        
+             
               {!auth.user ? (
                 <>
                   <li className="nav-item">
@@ -61,6 +52,11 @@ const Header = () => {
                 </>
               ) : (
                 <>
+                      <li className="nav-item">
+                <NavLink to="/" className="nav-link">
+                  Home
+                </NavLink>
+              </li>
                   <li className="nav-item">
                     <NavLink
                       onClick={handleLogout}
@@ -72,11 +68,7 @@ const Header = () => {
                   </li>
                 </>
               )}
-              <li className="nav-item">
-                <NavLink to="/cart" className="nav-link">
-                  Cart (0)
-                </NavLink>
-              </li>
+             
             </ul>
           </div>
         </div>
